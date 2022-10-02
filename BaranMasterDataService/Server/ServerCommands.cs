@@ -25,7 +25,6 @@ namespace BaranMasterDataService.Server
             return result;
 
         }
-
         private string serialize(List <JsonToPost.Root> listRoot)
         {
             string roots = "";
@@ -103,7 +102,6 @@ namespace BaranMasterDataService.Server
             }
             return response.Content;
         }
-
         public List<JsonToPost.Root> createJsonTemplate(List<CNMaterials> cnMaterials)
         {
             List<JsonToPost.Root> rootList = new List<JsonToPost.Root>();

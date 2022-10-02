@@ -5,9 +5,7 @@ using Microsoft.Extensions.Logging;
 using NCrontab;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -19,7 +17,6 @@ namespace BaranMasterDataService
         private readonly BaranMasterDataDBPath _baranMasterDataDBPath;
         private readonly Cron _cronExpression;
         private readonly ServerPath _serverPath;
-        //**
         private CrontabSchedule _schedule;
         private DateTime _nextRun;
         
@@ -68,13 +65,8 @@ namespace BaranMasterDataService
                     if (cNMaterialsObjectList.Count!=0)
                     {
                         serverCommands.postToServer(cNMaterialsObjectList);
-                        _logger.LogInformation("BULUNDU");
                     }
-                    else
-                    {
 
-                        _logger.LogInformation("bulunmadý");
-                    }
                      
                     _nextRun = _schedule.GetNextOccurrence(DateTime.Now);
                    

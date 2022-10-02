@@ -167,7 +167,6 @@ namespace BaranMasterDataService.Database
             }
 
         }
-
         public List<CNMaterials> findNullFSRDate()
         {
             SqlConnection connection = new SqlConnection(_baranMasterDataDBPath.DatabasePath);
